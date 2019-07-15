@@ -219,6 +219,17 @@ function sumArray (x)
 return sum;
 }
 
+function sumArrayW (x)
+{   var sum = 0;
+    var i=0;
+    while ( i<x.length)
+    {
+        sum = sum + x[i];
+        i++;
+    }
+return sum;
+}
+
 /*
 14
 Create a function called minInArray
@@ -241,6 +252,17 @@ function  minInArray (x)
 return min;
 }
 
+function  minInArrayW (x)
+{   var min = x[0];
+    var i=1;
+    while ( i<x.length)
+    {
+        if (x[i]<min)
+        min = x[i];
+        i++;
+    }
+return min;
+}
 /*
 15
 Create a function called removeFromArray
@@ -263,7 +285,16 @@ function removeFromArray (x,y)
 return x;
 }
 
-
+function removeFromArrayW (x,y)
+{   var i=0;
+    while ( i<x.length)
+    {
+        if (x[i]===y)
+        x.splice(i,1) ;
+        i++;
+    }
+return x;
+}
 /*
 16
 Create a function called oddArray
@@ -282,6 +313,19 @@ for (var i=0; i<x.length; i++)
     {
         if (x[i]%2===1)
         y.push(x[i]) ;
+    }
+return y;
+}
+
+function oddArrayW (x)
+{ var y =[];
+
+var i=0;
+while ( i<x.length)
+    {
+        if (x[i]%2===1)
+        y.push(x[i]) ;
+        i++;
     }
 return y;
 }
@@ -309,6 +353,17 @@ function aveArray (x)
 return sum/x.length;
 }
 
+function aveArrayW (x)
+{ var sum = 0;
+    var i=0;
+    while ( i<x.length)
+    {
+        sum = sum + x[i];
+        i++;
+    }
+return sum/x.length;
+}
+
 /*
 18
 Create a function called shorterInArray
@@ -329,6 +384,19 @@ function shorterInArray (x)
     { 
         if (x[i].length<short.length)
        short = x[i];
+    }
+
+return short;
+} 
+
+function shorterInArrayW (x)
+{ var short = x[0];
+    var i=0;
+    while ( i<x.length)
+    { 
+        if (x[i].length<short.length)
+       short = x[i];
+        i++;
     }
 
 return short;
@@ -362,6 +430,22 @@ for (var i=0; i<l; i++)
 return rep;
 }
 
+function  repeatCharW (str, chr)
+{
+var rep =0;
+var l = str.length;
+
+var i=0;
+while ( i<l)
+{ 
+    if (str[i]===chr)
+    rep++;
+    i++;
+}
+
+return rep;
+}
+
 /*
 20
 Create a function called evenIndexOddLength
@@ -390,6 +474,22 @@ var arr=[];
 return arr;
 }
 
+function  evenIndexOddLengthW (x){
+
+    var arr=[];
+    var i=0;
+        while (i<x.length)
+        { 
+           if (x[i].length%2===1)
+           arr.push(x[i])
+
+           i=i+2;
+        }
+    
+    
+    return arr;
+    }
+
 /*
 21
 Create a function called powerElementIndex
@@ -414,6 +514,18 @@ function  powerElementIndex (x)
 return y;
 }
 
+function  powerElementIndexW (x)
+{ var y =[];
+
+    var i=0;
+    while ( i<x.length)
+    { 
+        y[i]= x[i]**i;
+        i++;   
+    }
+return y;
+}
+
 
 /*
 22
@@ -433,6 +545,17 @@ function  evenNumberEvenIndex (x)
     for (var i = 0; i<x.length; i=i+2)
     { if (x[i]%2===0)
         y.push (x[i]);        
+    }
+return y;
+}
+
+function  evenNumberEvenIndexW (x)
+{var y= [];
+    var i = 0;
+    while ( i<x.length)
+    { if (x[i]%2===0)
+        y.push (x[i]); 
+        i=i+2;       
     }
 return y;
 }
